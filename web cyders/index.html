@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #nav{
+      background: #111;
+      width:0;
+      height: 100%;
+      position: fixed;
+      z-index: 1;
+      overflow-x: hidden;
+      transition: 1.5s;
+      top: 0;
+      padding-top: 0
+    }
+    #nav a{
+      
+     
+   
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.5s;
+}
+#close{
+  color: #818181;
+  font-size: 50px;
+  margin-left: 80%;
+  transition:5s
+}
+#nav a:hover{
+  color: white;
+  font-size: 50px;
+  transition: 0.5s
+}
+body{
+  background-color: rgba(29, 48, 104, 1);
+  transition: 2s
+}
+#head{
+  display:flex;
+  overflow: none;
+  padding-left: 25%
+}
+#text{
+  color: red;
+}
+*{
+  font-family: 'Courier New', Courier, monospace
+}
+#login{
+   background: #03051E;
+   color: white;
+   box-shadow: 0 0 10px blue;
+   border-radius: 10px;
+   height: 300px;
+   width: 320px;
+   margin: auto;
+   text-align: center
+}
+input{
+  background: rgba(70, 85, 240, 1);
+  border: none;
+  outline:none;
+  border-radius:5px;
+  color: white;
+  font-weight: bold;
+  height: 20px;
+  padding: 10px
+}
+#login h2{
+  font-size: 30px;
+  padding-top: 20px
+}
+#login label{
+  font-size: 25px
+}
+sub
+  </style>
+</head>
+
+<body>
+  <i id="open">open</i>
+  <div id="nav">
+<div id="close">&times;</div>
+  
+  <a id="bar" href="home.html">Home</a>
+  
+
+</div>
+
+<div id="head">
+<h1>Web</h1><h1 id="text">Cyders</h1>
+</div>
+<h4>
+  we teach you learn
+</h4>
+<div id="login">
+  <form>
+    <h2>
+     Login
+      </h2>
+      <hr>
+    <div id="form">
+      <label for="email">email:</label>
+      <input type="email" name="email" placeholder="your name">
+      <br>
+      <br>
+      <br>
+      <label for="name">name:</label>
+      <input type="text" name="name" id="" value="" placeholder="your name"/>
+      <input type="submit" value="login" id="sub">
+    </div>
+    </form>
+</div>
+</body>
+<script src="script.js">
+
+</script>
+</html>

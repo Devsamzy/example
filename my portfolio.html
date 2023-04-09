@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<style>
+
+</style>
+<body>
+<headerAb>
+  <i onclick="openNav()" class="fas fa-menu">&nav;open</i>
+  <h1 class="name">my portfolio</h1>
+  
+  </header>
+  
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="about.html">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+
+
+    
+  <div id="effect" style="margin-top: 100px">
+ <!--- <h1 id="static">I am</h1>--->
+  <div id="typewriter"></div>
+  </div>
+  <div id="about">
+    <h1>About Me</h1>
+    <h4>Hey my name is Samuel.I'm a web developer who loves creating beautiful and interactive websites. I have experience with HTML, CSS, JavaScript, and several web frameworks.</h4>
+    <a class="button" href="about.html">
+ see more...</a>
+  </div>
+  <div id="projectstart">
+  <div id="projecthead">
+   <h1>My Projects</h1>
+   <div id="project">
+   <h2>project 1</h2>
+   <hr>
+   <br>
+   <br>
+   <div id="notes">
+     <p>
+     my first ever project is a calculator which I made to test my skills.
+     <br>
+     <a href="calculator.html" class="button">
+       calculator
+       </a>
+     </p>
+   </div>
+   </div>
+   <br>
+   <!--2-->
+      <div id="project">
+        <h2>project 2</h2>
+        
+        <hr>
+        <br>
+        <br>
+        <div id="notes">
+          <p>
+   my second project was a 
+   </p>
+        </div>
+      </div>
+      <br>
+         <div id="project">
+           <h2>project 3</h2>
+           <hr>
+           <br>
+           <br>
+           <div id="notes">
+             <p>
+      my third project is a todo list one of the best .
+      <br>
+      <a href="https://samzy.vercel.app" class="button">
+        todo list
+        </a>
+      </p>
+           </div>
+         </div>
+         <br>
+  </div>
+  </div>
+  <div id="contact">
+      <h1>contact me</h1>
+     <label for="email">Email:</label>
+     <input type="email " placeholder="email" name="email" id="text"><br>
+     <label for="text">Name:</label>
+     <input type="text" name="text" id="text" placeholder="name"><br>
+     
+     <input id="button" type="submit" value="send">
+  </div>
+  <footer>
+    &copy; dev samzy
+  </footer>
+  
+</body>
+ 
+  <script>
+  
+    const xa = [
+      "Hello",
+      "My Name Is Samuel Aderogba",
+      "I Am A Web Developer",
+      "An HTML",
+      "CSS",
+      "JavaScript",
+      "Dev",
+      "I Can Help You To Create Any Type Of Website"
+      ];
+    const xb = 500;
+    const xc = document.getElementById("typewriter");
+    let xd = 1;
+    let xe = 1;
+    let xr = false;
+
+    function type() {
+      if (!xr) {
+        xc.innerText=xa[xe].split('').splice(0, xd++).join('');
+      } else {
+        xc.innerText = xc.innerText.split('').splice(0, xd--).join('');
+        if (xc.innerText.length == 0) {
+          xr = false;
+          xe++;
+          if (xe == xa.length) {
+            xe = 0;
+          }
+        }
+      }
+      if (xc.innerText.length == xa[xe].length) {
+        xr = true;
+      }
+    }
+    setInterval(type, 100);
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        //document.querySelector('body').style.marginLeft = '250px'
+      }
+    
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+  </script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</html>

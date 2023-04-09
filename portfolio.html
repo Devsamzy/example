@@ -1,0 +1,176 @@
+Sure, here's an example of a portfolio website using HTML, CSS, and JavaScript. The website showcases several projects, and each project can be clicked on to view more details.
+
+HTML code:
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section class="about-me">
+        <h2>About Me</h2>
+        <p>I'm a web developer who loves creating beautiful and interactive websites. I have experience with HTML, CSS, JavaScript, and several web frameworks.</p>
+    </section>
+    
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="project-image.jpg" alt="Project Image">
+            <h3>Project Name 1</h3>
+            <p>A brief description of the project.</p>
+            <button class="project-button">Learn More</button>
+            <div class="project-details hidden">
+                <p>More information about the project.</p>
+                <p><b>Technologies used:</b> HTML, CSS, JavaScript</p>
+            </div>
+        </div>
+        
+        <div class="project">
+            <img src="project-image.jpg" alt="Project Image">
+            <h3>Project Name 2</h3>
+            <p>A brief description of the project.</p>
+            <button class="project-button">Learn More</button>
+            <div class="project-details hidden">
+                <p>More information about the project.</p>
+                <p><b>Technologies used:</b> HTML, CSS, JavaScript</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+```
+
+CSS Code:
+```
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+.about-me, .projects, .contact {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project {
+    width: 45%;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.project img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.project-details {
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+```
+
+JavaScript Code:
+```
+<script>
+const projectButtons = document.querySelectorAll('.project-button');
+
+projectButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        const projectDetails = this.parentNode.querySelector('.project-details');
+        if (projectDetails.classList.contains('hidden')) {
+            projectDetails.classList.remove('hidden');
+            this.innerText = 'Hide Details';
+        } else {
+            projectDetails.classList.add('hidden');
+            this.innerText = 'Learn More';
+        }
+    })
+});
+```
+
+Note: This is just an example of what a portfolio website may look like using HTML, CSS, and JavaScript. The design and layout can be customized to your own preferences and needs.

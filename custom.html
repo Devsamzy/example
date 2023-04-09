@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--Custom Code 1: Fixing the dark theme issue and JavaScript issue-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>calculator</title>
+        <link id="theme" rel="stylesheet" href="light.css">
+        <link rel="stylesheet" href="calc.css">
+    </head>
+    <body id="body">
+        <h1 id="head">CALCULATOR</h1>
+        <hr>
+        <div id="table">
+            <table>
+                <tr>
+                    <input type="text" id="output" disabled>
+                </tr>
+                <tr>
+                    <td><button id="btn" >dark/light</button></td>
+                    <td><button id="btn">C</button></td>
+                    <td><button id="btn">DELL</button></td>
+                    <td><button id="btn">/</button></td>
+                </tr>
+                <tr>
+                    <td><button id="btn">7</button></td>
+                    <td><button id="btn">8</button></td>
+                    <td><button id="btn">9</button></td>
+                    <td><button id="btn">x</button></td>
+                </tr>
+                <tr>
+                    <td><button id="btn">4</button></td>
+                    <td><button id="btn">5</button></td>
+                    <td><button id="btn">6</button></td>
+                    <td><button id="btn">+</button></td>
+                </tr>
+                <tr>
+                    <td><button id="btn">1</button></td>
+                    <td><button id="btn">2</button></td>
+                    <td><button id="btn">3</button></td>
+                    <td><button id="btn">-</button></td>
+                </tr>
+                <tr>
+                    <td id="btn"><h2>sam</h2></td>
+                    <td><button id="btn">0</button></td>
+                    <td><button id="btn">.</button></td>
+                    <td><button type="button" id="btn">=</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            output = document.getElementById("output");
+            reservedKeys = [document.querySelector("button").innerText, 'DELL', 'C', 'sam', '='] 
+            table = document.querySelector("table");
+            table.onclick = (e) => {
+                click = e.target.innerText;
+                console.log(click);
+                //check if clicked click is a reserved key
+                if(!reservedKeys.includes(click)){
+                    output.value += click.toString();
+                }
+                else if(click == "C"){
+                    output.value = "";
+                }
+                else if(click == "DELL") {
+                    let txt = output.value;
+                    output.value = '';
+                    for(i=0;i != (txt.length-1);i++){
+                        output.value+=txt[i];
+                    }
+                }
+                else if(click == "="){
+                    output.value = eval(output.value.replaceAll("x", "*"));
+                }
+                else if(click == "sam"){
+                    alert('hey how far this calculator was made by samuel i hope you enjoyed using it thanks!! to support him contact👍 him via WhatsApp and phone📞 "+2348128068658"🇳🇬 of facebook@ "Dev samzy"')
+                }
+                else if(click == document.querySelector("button").innerText){
+                themeSrc = theme.getAttribute("href");
+                localStorage.setItem("theme", themeSrc == "light.css" ? theme.href = cssTheme.dark : theme.href = cssTheme.light);
+                }
+            }
+            let cssTheme = {
+                light: 'light.css',
+                dark: 'dark.css',
+            }
+            theme = document.getElementById("theme")
+            if(localStorage.theme){
+                theme.href = localStorage.theme;
+            }
+        </script>
+        
+    </body>
+</html>

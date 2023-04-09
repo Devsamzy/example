@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  *{
+    color: 
+  }
+    .input{
+      color: black;
+      background: blue;
+      border: none;
+      border-radius: 10px;
+      padding:4px;
+      margin-left:50%;
+      max-width: 50%;
+      min-width: 20px;
+      margin-top: 0;
+      top:0;
+    }
+    input{
+      margin-top: 150%;
+      border: black solid 0.5px;
+     border-radius: 20px;
+     padding:10px;
+position:fixed;
+position: absolute;
+margin-left: auto;
+outline:none;
+transform: ease 3s;
+color: black
+    }
+    input:hover{
+      width: 100%;
+      position: relative
+    }
+    body:hover{
+      
+    }
+    body{
+      background: rgba(0, 0, 0, 0.7294117647058823);
+      color: white
+    }
+    .msg{
+      background: rgba(255, 239, 239, 0.59)
+    }
+    /*already done the code just set the class name to bot or set it to bot*/
+    .bot{
+      color: black;
+      background: white;
+      font-size: 20px
+    }
+    .chatLog{
+      color: white
+    }
+  </style>
+</head>
+
+<body>
+  <div id="chatLog"></div>
+<input type="text" placeholder="your wuestion" id="userBox" id="userBox"
+onkeydown="if(event.keyCode == 13){ talk()}">
+
+</body>
+
+  
+<script>function talk(){
+var know = {
+"Who are you" : "i am david",
+"How are you" : "Good :)",
+"What can i do for you" : "Please Give us A Follow & Like.",
+"Your followers" : "I have my family of 5000 members, i don't have follower ,have supportive Famiy ",
+"Ok" : "yh ",
+"Bye" : "Okay! Will meet soon..",
+'hi':'hafa nah how is family'
+};
+//debug from here zino
+var user = document.getElementById('userBox').value;
+//user.toLowerCase();
+
+//var inpt = document.querySelector('input').value;
+//inpt.toLowerCase();
+
+//var parent = document.querySelector("body");
+
+//var text = document.createElement('p');
+//text.innerHTML = user;
+//parent.appendChild(text);
+
+
+
+//var input = document.getElementById('userBox');
+//var user=input.value;
+//user.toLowerCase();
+//document.querySelector('input').value.toLowerCase();
+var text=document.createElement('p');
+text.innerHTML=user;
+//text.toLowerCase();
+//to show your message
+var usermsg=document.querySelector('body').insertAdjacentElement('beforeend',text).className='input';
+document.getElementById('chatLog');
+//young zino from here
+if (user in know) {
+var msg=document.getElementById('chatLog');
+var bot=document.querySelector('body').insertAdjacentText('beforeend',know[user]);
+
+//var bot=msg.innerHTML = know[user];
+//bot.className='bot';
+document.getElementById('chatLog').insertAdjacentElement('beforeend',msg).className='msg';
+}
+//error
+else{
+document.querySelector('body').insertAdjacentHTML('beforeend',none);
+var none=document.createElement('p');
+none.innerHTML='<p>i dont get</p>';
+//none.className='bot';
+}
+
+}
+</script>
+</html>

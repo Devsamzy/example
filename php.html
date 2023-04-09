@@ -1,0 +1,27 @@
+
+
+<form method="POST" action="upload.php" enctype="multipart/form-data">
+  <input type="file" name="fileToUpload" />
+  <input type="submit" name="submit" value="Upload File" />
+</form>
+
+
+<?php
+// Check if the form was submitted
+if (isset($_POST['submit'])) {
+
+    // Get the file name
+    $fileName = $_FILES['fileToUpload']['name'];
+    
+    // The temporary location of the uploaded file
+    $tmpFilePath = $_FILES['fileToUpload']['tmp_name'];
+    
+    // The directory where we want to move the uploaded file
+    $uploadDir = 'uploads/';
+    
+    // Move the file to the desired directory
+    $uploadPath = $uploadDir . $fileName;
+    move_uploaded_file($tmpFilePath, $uploadPath);
+}
+?>
+

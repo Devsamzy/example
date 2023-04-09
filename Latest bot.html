@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <style>
+      .bot_name{
+        color: blue;
+        text-align: center;
+        padding-top: 20px;
+      }
+      body{
+      border: 5px solid black;
+      border-radius: 10px;
+      
+      }
+      
+      .h{
+        color:white;
+        float: right;
+        background-color: blue;
+        border-radius: 5px;
+        padding:10px;
+        
+      }
+      img{
+        width: 100%;
+        padding-top: 0;
+        top: 0;
+        margin-top: 0;
+      }
+      #input{
+        border-radius: 10px;
+      }
+      #buttom{
+        background-color: #eee;
+        margin-top:125%;
+        position:absolute;
+        position:fixed;
+        float: right;
+        width: 99%;
+        text-align: center;
+        border: 10px #eee solid;
+      }
+    </style>
+  </head>
+  <body id="page">
+   <h1 class="bot_name">
+     
+     sammie🤖
+   </h1>
+   <hr>
+   
+   <p id="botText">
+     
+   </p>
+<div id="buttom" onclick="change()">
+      <input type="text" id="input">
+      <button onclick="send()">send</button>
+      </div>
+      <div id="new"></div>
+  </body>
+    <script>
+    //for human
+   function send(){
+      var h=document.createElement("p");
+      var msg=document.getElementById("input");
+      
+      h.innerHTML="~"+msg.value;
+      h.className="h"
+     var nww=document.getElementById("new");
+      nww.insertAdjacentElement("beforeend",h);
+    }
+    function change(){
+      document.getElementById("buttom").style="position:absolute"
+    }
+    //human ends here
+    //bot starts here
+    </script>
+</html>

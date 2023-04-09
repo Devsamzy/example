@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    background-image: linear-gradient(to right, indigo, blue);
+    color: #fff;
+}
+#heading{
+    text-align: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 5%;
+}
+
+
+#todo_1{
+    border-radius: 14px;
+    height: 45px;
+    width: 50%;
+    border: groove;
+
+
+
+}
+
+
+#todo_1_save_btn{
+    opacity: 0;
+}
+
+#todo_1_save_btn.visible{
+    border-radius: 10px;
+    background-color: gray;
+    opacity: 1;
+    color: lime;
+}
+
+
+#new_todo{
+    padding-left: 350px;
+}
+
+
+#enter{
+    width: 50%;
+    text-align: center;
+    margin-left: 280px;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+
+
+
+    </style>
+    <title>TO-DO LIST</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+</head>
+<body>
+    
+    <div>
+        <h2 id="heading">TO DO LIST</h2>
+    </div>
+    
+
+    <div id="new_todo">
+        <input type="text" name="toDo" id="todo_1" placeholder="Add a to-do item">
+        <button id="todo_1_save_btn">
+            <h4>Add To-Do</h4>
+        </button>
+    </div>
+
+<br><br>
+    <div id="enter"> 
+
+    </div>
+   
+
+<script>
+    var btn_1 = document.getElementById("todo_1_save_btn");
+var todo_1 = document.getElementById("todo_1");
+var newDiv = document.getElementById("enter");
+var todo = document.createElement("h3");
+var newtodo = document.getElementById("new_todo");
+
+
+
+todo_1.onclick = function(){
+    if(btn_1.className==""){
+        btn_1.className = "visible"
+    }
+    else{
+        btn_1.className == ""
+    }
+}
+
+
+
+
+btn_1.onclick = function(){     
+    var h4 = document.createElement("h4");
+    h4.innerHTML= '<input type="checkbox" name="" id="">' + todo_1.value;
+    newDiv.insertAdjacentElement("beforeend", h4);
+    todo_1.value = "";
+    
+} 
+
+
+
+</script>
+</body>
+</html>

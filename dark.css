@@ -1,0 +1,57 @@
+body{
+    font-family: Courier New;
+    background: #E3E3E4;
+    color: black;
+    border: black 5px solid;
+    border-radius: 10px;
+    position: fixed;
+    height: 100%
+    }
+    #head{
+    text-align: center;
+    }
+    table{
+    width: 100%;
+    height: 100%;
+    border: black;
+    }
+    #btn{
+    color: black;
+    background: #686868;
+    border: 0.5px black solid;
+    width: 80px;
+    height: 80px;
+    font-size: medium;
+    }
+    #btn:hover{
+    background: blue;
+    }
+    #output{
+    font-size: 50px;
+    float: right;
+    }
+    #output{
+    width: 96%;
+    
+    background: #686868;
+    color: black;
+    float: right;
+    height: 70px;
+    text-align: right;
+    margin: auto;
+    margin-right:4px;
+    }
+    .light{
+    background: black;
+    border: white 5px solid;
+    font-family: Courier New;
+    color: white;
+    }
+    .btn{
+    color: black;
+    background: #eee;
+    border: 0.5px black solid;
+    width: 80px;
+    height: 80px;
+    font-size: 5px;
+    }

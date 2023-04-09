@@ -1,0 +1,457 @@
+hi another project:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  
+  body{
+   margin: 0px; 
+   }
+   .container{
+   display: flex; 
+   background-color: black; 
+   padding-bottom: 5px;
+   margin-bottom: 0px;
+   }
+   .hi{
+   background-color: green;
+   margin-left: 2px; 
+   padding: 15px; 
+   text-decoration: none;
+   color: white;
+   width: 70px;
+   text-align: center; 
+   transition-duration: 0.09s;
+   word-wrap: break-word;
+   font-size: 15px;
+   }
+   .hi:hover{
+   box-shadow: inset 0 0 9px 9px darkgreen;
+   font-size: 14px; 
+   } 
+   .active{
+   background-color: green;
+   font-size: 15px;
+   text-decoration: none;
+   color: white;
+   word-wrap: break-word;
+   text-align: center;
+   padding: 15px; 
+   }
+   .active:hover{
+   box-shadow: inset 0 0 9px 9px darkgreen;
+   font-size: 14px; 
+   } 
+   
+   .fluid-container{
+   position: fixed;
+   left: -110px;
+   top: 202px;
+   background-color: black;
+   padding: 10px;
+   border-radius: 0px 7px 7px 0px; 
+   z-index: 1;
+   overflow: hidden;
+   box-shadow: 3px 3px rgba(0,0,0,0.15);
+   transition-duration: 1s;
+   }
+   .lf{
+   margin-left: 0px;
+   font-size: 10px;
+   background-color: yellowgreen;
+   display: flex;
+   padding: 18px;
+   width: 60px;
+   text-align: center;
+   margin-bottom: 15px;
+   text-decoration: none;
+   font-size: 13px;
+   color: white;
+   font-weight: bolder;
+   transition-duration: 1s;
+   }
+   .lf:hover{
+   background-color: green;
+   text-shadow: 2px 1px rgba(0,0,0,0.19); 
+   }
+   .btn{
+   position: fixed;
+   left: 6px;
+   top: 160px;
+   z-index: 1;
+   font-size: 22px; 
+   } 
+   .oink{
+   overflow: scroll; 
+   height: 700px;
+   border: 1px solid black; 
+   } 
+   .eyeOf{
+   padding: 2px;
+   background-color: white;
+   box-shadow: inset 0 0 8px 8px darkgreen;
+   background-color: green;
+   margin-bottom: -17px; 
+   }
+   h1{
+   color: white; 
+   }
+   .insert{
+ overflow: hidden;
+   }
+   .image{
+   width: 358px;
+   height: 300px; 
+   background: url("History.jpg"); 
+   background-position: top right;
+   text-align:center;
+   border: 1px solid black;
+   opacity: 0.59;
+   }
+   .intro{
+   font-size: 35px; 
+   font-weight: bolder;
+   color: white; 
+   }
+   .offtro{
+   margin: 15px;
+   padding: 8px;
+   border-radius: 4px;
+   background-color: rgba(0,0,0,0.13);
+   box-shadow: inset 0 0 3px 3px rgba(0,0,0,0.09);
+   overflow: hidden;
+   }
+   .content{
+   display: none;
+   position: fixed;
+   top: 0px; 
+   width: 100%;
+   height: 100%;
+   padding-top: 260px;
+   padding-left: 20px;
+   background-color: rgba(0,0,0,0.56); 
+   z-index: 2;
+   transition-duration: 5s;
+   }
+   input[type="text"]{
+   height: 35px; 
+   width: 310px;
+   padding: 9px;
+   border: 4px solid rgba(0,0,0,0.55);
+   transition-duration: 2s;
+   font-weight: bolder;
+   font-size: 23px;
+   color: black;
+   } 
+   input[type="text"]:hover{
+   background-color: rgba(0,0,0,0.45); 
+   color: white; 
+   }
+   button[type="button"]{
+ margin-top: 15px;
+ padding: 15px;
+ font-size: 18px; 
+ text-align: center;
+ width: 200px;
+ float: left; 
+   }
+   button[type="submit"]{
+  position: absolute;
+  top: 10px; 
+  left: 300px; 
+  padding: 5px;
+  font-size: 18px; 
+   }
+   .Core{
+   display: none;
+   position: fixed;
+   background-color: rgba(0,0,0,0.26);
+   height: 100%;
+   width: 100%;
+   top: 0px; 
+   z-index: 2; 
+   } 
+   .act{
+   position: static;
+   border-radius: 5px;
+   padding: 5px;
+   background-color: white;
+   margin-top: 20px;
+   margin-left: 50px; 
+   margin-right: 50px;
+   overflow: hidden;
+   
+   }
+   h3{
+   text-align: center;
+   margin: 0px;
+   background-color: #c0ed04;
+   padding: 8px;
+   color: white;
+   border-radius: 5px; 
+   }
+   .reported{
+   width: 97%;
+   height: 155px; 
+   font-size: 18px; 
+   }
+   .add-btn{
+   float: right;
+   background-color: skyblue;
+   color: white; 
+   border: none;
+   padding: 9px;
+   border-radius: 4px;
+   width: 90px;
+   transition-duration: 0.00s; 
+   }
+   .add-btn:hover{
+   background-color: red; 
+   }
+   .register{
+   display: none;
+   position: fixed;
+   top: 0px;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0,0,0,0.35);
+   z-index: 2; 
+   }
+   .regs{
+   margin-top: 50px;
+   margin-left: 30px;
+   margin-right: 30px;
+   background-color: white;
+   padding: 5px;
+   border-radius: 6px; 
+   }
+   .jie{
+   height: 100px;
+   overflow: scroll; 
+   }
+   input[type="name"], input[type="email"], input[type="password"]{
+   padding: 5px;
+   width: 220px;
+   font-family: fantasy;
+   border: 2px solid grey; 
+   color: grey;
+   border-radius: 2px;
+   font-weight: bolder;
+   transition-duration: 2s; 
+   } 
+   input[type="name"]:hover, input[type="email"]:hover, input[type="password"]:hover{
+   background-color: rgba(0,0,0,0.38);
+   color: white; 
+   } 
+   .fn-fn-container{
+   display: none;
+   position: fixed;
+   top: 0px;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0,0,0,0.25); 
+   z-index: 2; 
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+ <a href="#" class="active">HOME</a>
+ <a href="#" class="hi">SKILL</a>
+ <a href="#" class="hi">COURSE</a>
+ <a href="#" class="hi">ABOUT</a>
+  </div>
+ <button class="btn" onclick="hiden()">x</button></button>
+ <button class="btn" onclick="show()">></button></button>
+ <div class="fluid-container">
+ <a href="#" class="lf" onclick="snipe()">LOG IN</a>
+ <a href="#" class="lf" onclick="registerNow()">REGISTER</a>
+ <a href="#" class="lf" onclick="asd()">CORE</a>
+ <a href="#" class="lf" onclick="fadeon()">MORE</a>
+ </div>
+<div class="oink">
+<div class="eyeOf">
+<h1 align="center">HOME</h1>
+</div>
+<div class="insert">
+<section class="image">
+<p class="intro">WELCOME TO MY WEB DEVELOPED!!!!! THIS IS MY FIRST PERFECTLY CREATION FOR ME</p>
+</section>
+<section class="offtro">
+<p class="offltro">
+If You New Here You Can Sign In Here Or Register.But If You Any Problem In Our Site Or There Someone Hacked In Youre Account Go To Core For More
+</p>
+</section>
+<section class="offtro">
+<p class="offltro">
+Hey More Fun In My Website Search Good Habitat And Good Videos....<br>
+Even Story Of God/Jesus Or<br> Adventure Time, The Lion King Animated, Anabelle, etc.Just Search For Videos And Good Things In Our World. 
+</p>
+</section>
+<section class="offtro">
+<p class="offltro">
+Touch The <ins>More</ins> To Search More Content Here
+</p>
+</section>
+<section class="offtro">
+<p class="offltro">
+Hey More Skill In Our Tutorial About Css And HTML And Js even Php and SQL... 
+</p>
+</section>
+<section class="offtro">
+<p class="offltro">
+WHY <ins>COURSE</ins> HERE???:<br><br>
+   In this Site You can Find where the best place for you're ambition about programming. 
+     find Out More <ins>COURSE</ins>.
+</p>
+</section>
+<section class="offtro">
+<p class="offltro">
+SAFE NCOV19:<br><br>
+be safe around the world about Covid19.<br>Covid as total of 4,727,625 as of May 19, 2020.<br><br>
+<ins><i>Stay home Stay Safe</i></ins><br>
+<ins><i>Remind!: SOCIAL DISTANCING!</i></ins>.
+</p>
+</section>
+</div>
+</div>
+<div class="content">
+<button type="submit" onclick="faded()">x</button>
+<input type="text" placeholder="Our content"><br><button type="button" onclick="searchPath()">search</button>
+</div>
+<div class="Core">
+<button type="submit" onclick="four()">x</button>
+<section class="act">
+<h3>REPORT</h3>
+<section class="offtro">
+<p class="offltro" align="center">
+please describe what is problem.. 
+</p>
+</section>
+<section class="jie">
+<code class="texts">Write</code><br>
+<form name="form1" action="AngAlamatNgAswang.html" method="post">
+<textarea class="reported" name="text" placeholder="REPORT" required></textarea>
+<input type="submit" class="add-btn" value="Send">
+</form>
+</section>
+</section>
+</div>
+<div class="register">
+<button type="submit" onclick="hub()">x</button>
+<section class="regs">
+<h3>REGISTER</h3>
+<section class="offtro" style="overflow: scroll; height: 250px">
+<form name="form2" action="AngAlamatNgAswang.html" method="post">
+<code>first name:</code><br>
+<input type="name" placeholder="first name" required>
+<br><code>last name:</code>
+<br>
+<input type="name" placeholder="last name" required>
+<br><code>Email:</code>
+<br>
+<input type="email" placeholder="email@email.com" required>
+<br><code>gender:</code>
+<br>
+<ul style="list-style-type: none;margin-left: -30px">
+<li><input type="radio" name="gender" value="male" required>male</li>
+<li><input type="radio" name="gender" value="female" required>female</li>
+<li><input type="radio" name="gender" value="costumes" required>costom</li>
+</ul>
+<br><code>password: </code><br>
+<input type="password" name="password" placeholder="password" required>
+<br>
+<code>confirm password:</code><br>
+<input type="password" name="confirm" placeholder="confirm password" required><br>
+<code>answer this:</code><br>
+<input type="name" name="look" value="čðïmIl" readonly><br><code>answer:<br>
+<input type="name" name="answer" placeholder="answer" required></code><br><br>
+<input type="submit" class="add-btn" value="register">
+</form>
+</section>
+</section>
+</div>
+<div class="fn-fn-container">
+<button type="submit" onclick="noneSence()">x</button>
+<section class="regs">
+<h3>log in</h3>
+<section class="offtro" style="height: 180px; overflow: scroll">
+<form name="form3" action="AngAlamatNgAswang.html" method="post">
+<code>email:</code><br>
+<input type="email" name="email" placeholder="example123@email.com" required><br>
+<code>password:</code><br>
+<input type="password" name="password" placeholder="password:example" required><br><br>
+<input type="submit" class="add-btn" value="submit">
+</form>
+</section>
+</section>
+</div>
+<script>
+
+function hiden()
+{
+ var x = document.getElementsByClassName("fluid-container");
+ x[0].style.left = "-110px";
+ var me = document.getElementsByClassName("btn");
+ me[1].style.display ="block";
+ me[0].style.display ="none";
+ }
+ function show()
+ {
+ var se = document.getElementsByClassName("btn");
+ se[1].style.display ="none";
+ se[0].style.display ="block";
+ var zx = document.getElementsByClassName("fluid-container");
+ zx[0].style.left ="0px"; 
+ }
+ function faded()
+ {
+ var x = document.getElementsByClassName("content");
+ x[0].style.display ="none"; 
+ }
+ function fadeon()
+ {
+ var i = document.getElementsByClassName("content");
+ i[0].style.display ="block"; 
+ } 
+ function asd()
+ {
+ //some code 
+ var ii = document.getElementsByClassName("Core");
+ ii[0].style.display ="block"; 
+ }
+ function four()
+ {
+ var cb = document.getElementsByClassName("Core");
+ cb["0"].style.display ="none"; 
+ }
+ function registerNow()
+ {
+ var knew = document.getElementsByClassName("register");
+ knew[0].style.display ="block"; 
+ }
+ function hub()
+ {
+ var kiwi = document.getElementsByClassName("register");
+ kiwi[0].style.display ="none"; 
+ }
+ function snipe()
+ {
+ //some code 
+ var cgo = document.getElementsByClassName("fn-fn-container");
+ cgo[0].style.display ="block"; 
+ }
+ function noneSence()
+ {
+ //some code
+ var cgh = document.getElementsByClassName("fn-fn-container");
+ cgh[0].style.display ="none"; 
+ } 
+</script>
+</body>
+</html>
+
+remind: "change the image";

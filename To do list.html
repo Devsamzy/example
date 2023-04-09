@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+/* switch starts here */
+  #switch {
+    background: #EBEBEB;
+    width: 50px;
+    height: 25px;
+    -webkit-appearance: none;
+    border: 1px solid;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(225, 000, 000, 0.10);
+
+    margin-left: 80%;
+
+    position: absolute;
+  }
+
+  #switch::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+
+
+  }
+
+  #switch:checked {
+    background-color: blue;
+
+  }
+
+  #switch:checked::before {
+    left: 27px;
+  }
+/* switch ends here */
+/* for the switch */
+  .light {
+    background: #0b122e;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background:#8a8a8a;
+    
+  }
+
+  #head {
+
+   
+  }
+ hr{
+    color:white;
+   border: white solid 1px;
+  height: 5px;
+ border-left: none;
+border-right: none;
+
+  }
+  #input{
+    border: none;
+    background:blue;
+    color:white;
+    height:30px;
+    align-self: center;
+    font-size:15px;
+  }
+  .btn{
+    background-color: green;
+    height: 30px;
+    border: none;
+    opacity: 0
+    
+  }
+  /* for the list */
+  #todo{
+   /* background: #8a8a8a;*/
+    min-height:500px;
+    width: 300px;
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+    
+    align-items:center;
+    padding-top: 0.5px;
+  }
+  div h1{
+    font-size: 30px;
+    color: white;
+  }
+  div hr{
+    height: 2px;
+  }
+  .h2{
+    color: white;
+  }
+  .tog{
+    text-decoration: line-through
+  }
+  .btn.visible{
+    opacity:1;
+  }
+  .btns.visible{
+    opacity:1
+  }
+</style>
+
+<body id="body">
+  <input type="checkbox" id="switch">
+
+  <h1 id="head">
+    TODO LIST
+
+  </h1>
+  <hr>
+ 
+  <div id="todo">
+     <h1>add to your todo</h1>
+     <hr>
+  <input type="text" id="input">
+<button i
+class="btn" onclick="add()">add</button>
+<div id="list">
+  </div>
+  <button onclick="clr()" class="btn">clear all</button>
+</div>
+</body>
+<script>
+  let theme = document.getElementById("switch");
+  theme.addEventListener('click', function() {
+    document.getElementById("body").classList.toggle("light");
+   // document.querySelector('#todo').classList.toggle('light')
+  })
+  function add(){
+  var input=document.getElementById('input');
+//  input.onclick= function(){
+    //document.querySelector('button').classList.toggle('show');
+  //}
+  var list=document.getElementById('list');
+  var text=document.createElement('h2');
+;
+  text.innerHTML='<h2>'+'*'+input.value+'</h2>';
+  text.className='h2';
+  
+  list.insertAdjacentElement('beforeend',text);
+  
+  input.value="";
+  text.addEventListener('click',function(){
+    text.classList.toggle('tog');
+  })
+  text.addEventListener('dblclick',function(){
+    text.innerHTML='';
+  })
+  }
+  function clr(){
+    document.getElementById("list").innerHTML="";
+  }
+ document.querySelector('#input')
+ .addEventListener('click',
+ function(){
+   if(input.className==''){
+    document.querySelector('button').className='visible'
+}})
+//function show(){
+//  document.querySelector('#btn').
+//}
+
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
